@@ -1,0 +1,67 @@
+{
+  "construction": [
+    {
+      "title": "งบประมาณคงเหลือ",
+      "description": "เจอกระเป๋าเงินที่ผู้รับเหมาคนเก่าลืมไว้",
+      "moneyChange": 50,
+      "resourceChange": 0,
+      "moraleChange": 0,
+      "destroyRoad": false,
+      "type": "positive",
+      "chance": 0.05
+    },
+    {
+      "title": "ชาวบ้านช่วยงาน",
+      "description": "ชาวบ้านมาช่วยขนหิน ดิน ทราย เพื่อขอบคุณ",
+      "moneyChange": 20,
+      "resourceChange": 10,
+      "moraleChange": 5,
+      "destroyRoad": false,
+      "type": "positive",
+      "chance": 0.15
+    },
+    {
+      "title": "วัสดุไม่ได้มาตรฐาน",
+      "description": "ปูนที่สั่งมาแข็งคาโม่ ต้องทิ้งยกล็อต",
+      "moneyChange": 0,
+      "resourceChange": -30,
+      "moraleChange": -5,
+      "destroyRoad": false,
+      "type": "negative",
+      "chance": 0.08
+    },
+    {
+      "title": "อุบัติเหตุ!",
+      "description": "นั่งร้านถล่ม โชคดีไม่มีใครเจ็บหนัก",
+      "moneyChange": -30,
+      "resourceChange": -10,
+      "moraleChange": -10,
+      "destroyRoad": false,
+      "type": "negative",
+      "chance": 0.08
+    }
+  ],
+  "decisions": [
+    {
+      "id": "evt_ext_001",
+      "title": "ตรวจงานจากส่วนกลาง",
+      "description": "เจ้าหน้าที่จากส่วนกลางขอเข้ามาตรวจสอบมาตรฐานถนนกะทันหัน แต่ถนนช่วงนี้เรา 'ลดสเปค' ไปนิดหน่อย",
+      "options": [
+        {
+          "label": "ยัดเงินใต้โต๊ะ",
+          "costMoney": 800, "costResources": 0, "costMorale": 0,
+          "successRate": 0.9,
+          "successOutcome": { "money": 0, "resources": 0, "morale": 0, "message": "ผ่านฉลุย เจ้าหน้าที่ยิ้มแก้มปริ" },
+          "failOutcome": { "money": -1000, "resources": 0, "morale": -20, "message": "โดนแอบถ่ายคลิปแฉ! เสียทั้งเงินทั้งหน้า" }
+        },
+        {
+          "label": "สารภาพและซ่อมแซม",
+          "costMoney": 200, "costResources": 100, "costMorale": 0,
+          "successRate": 1.0,
+          "successOutcome": { "money": 0, "resources": 0, "morale": 10, "message": "เจ้าหน้าที่ชื่นชมในความซื่อสัตย์" },
+          "failOutcome": { "money": 0, "resources": 0, "morale": 0, "message": "" }
+        }
+      ]
+    }
+  ]
+}
