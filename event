@@ -1701,6 +1701,836 @@
         }
       }
     ]
+  },
+  {
+    id: "evt_021",
+    title: "งบประมาณถูกหั่นแบบไม่แจ้งล่วงหน้า",
+    description: "รัฐบาลประกาศนโยบายรัดเข็มขัดกะทันหัน ทำให้งบประมาณก่อสร้างในงวดนี้ถูกตัดไป 30% แต่คุณยังต้องสร้างถนนให้เสร็จตามมาตรฐานเดิม",
+    options: [
+      {
+        label: "ลดความหนาของชั้นผิวถนนลง",
+        costMoney: 0,
+        costResources: 100,
+        costMorale: 10,
+        successRate: 0.7,
+        successOutcome: {
+          money: 200,
+          resources: 0,
+          morale: -5,
+          message: "ไม่มีใครสังเกตเห็น ความประหยัดคือลาภอันประเสริฐ"
+        },
+        failOutcome: {
+          money: -300,
+          resources: 0,
+          morale: -20,
+          message: "ถนนพังตั้งแต่วันแรกที่รถบรรทุกวิ่งผ่าน คุณโดนปรับอ่วม"
+        }
+      },
+      {
+        label: "ติดสินบนเจ้าหน้าที่ตรวจงาน",
+        costMoney: 200,
+        costResources: 0,
+        costMorale: 5,
+        successRate: 0.85,
+        successOutcome: {
+          money: 100,
+          resources: 0,
+          morale: 10,
+          message: "เจ้าหน้าที่เซ็นผ่านให้แบบหลับตาข้างหนึ่ง งานเดินต่อได้สะดวก"
+        },
+        failOutcome: {
+          money: -400,
+          resources: 0,
+          morale: -30,
+          message: "เจอเจ้าหน้าที่ตงฉินเข้าให้ เรื่องถึงหู ป.ป.ช. ทันที"
+        }
+      },
+      {
+        label: "ขอรับบริจาค 'ยางมะตอย' จากชาวบ้าน",
+        costMoney: 50,
+        costResources: 0,
+        costMorale: 20,
+        successRate: 0.3,
+        successOutcome: {
+          money: 0,
+          resources: 200,
+          morale: 40,
+          message: "ชาวบ้านซาบซึ้งในความเสียสละ ยอมลงขันช่วยซื้อวัสดุ"
+        },
+        failOutcome: {
+          money: -50,
+          resources: 0,
+          morale: -40,
+          message: "โดนชาวบ้านรุมด่าว่าเอางบไปกินหมดแล้วยังจะมาขอเพิ่มอีก"
+        }
+      },
+      {
+        label: "ยอมควักกระเป๋าตัวเองจ่ายส่วนต่าง",
+        costMoney: 400,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.95,
+        successOutcome: {
+          money: -400,
+          resources: 150,
+          morale: 20,
+          message: "งานเดินต่อได้สมบูรณ์แบบ แต่กระเป๋าคุณเบาหวิว"
+        },
+        failOutcome: {
+          money: -400,
+          resources: 0,
+          morale: -10,
+          message: "จ่ายไปแล้วแต่งานก็ยังล่าช้าเพราะขาดวัสดุอยู่ดี"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_022",
+    title: "ผู้ใหญ่บ้านขอ 'ค่าดูแล' ความเรียบร้อย",
+    description: "ผู้ใหญ่บ้านเดินมาที่เขตก่อสร้าง บอกว่าช่วงนี้ขโมยชุมนะ ถ้าไม่อยากให้เครื่องจักรหาย ต้องจ่ายค่าจ้างเด็กวัยรุ่นในพื้นที่มาเฝ้า",
+    options: [
+      {
+        label: "จ่ายเงินตามที่ขอแบบไม่คิดมาก",
+        costMoney: 150,
+        costResources: 0,
+        costMorale: 5,
+        successRate: 0.9,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 15,
+          message: "ความสงบสุขกลับมา เครื่องจักรปลอดภัยหายห่วง"
+        },
+        failOutcome: {
+          money: -150,
+          resources: -50,
+          morale: -10,
+          message: "จ่ายเงินไปแล้ว แต่เด็กวัยรุ่นดันเมาแล้วหลับ ของก็ยังหายอยู่ดี"
+        }
+      },
+      {
+        label: "จ้างบริษัทรปภ. มืออาชีพมาแทน",
+        costMoney: 250,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.8,
+        successOutcome: {
+          money: 0,
+          resources: 50,
+          morale: 20,
+          message: "มาตรการเข้มงวด ผู้ใหญ่บ้านไม่กล้าหือ ของไม่หายแน่นอน"
+        },
+        failOutcome: {
+          money: -250,
+          resources: -100,
+          morale: -20,
+          message: "โดนผู้ใหญ่บ้านสั่งคนมาแอบวางปะปนในไซด์งานป่วนรปภ."
+        }
+      },
+      {
+        label: "แกล้งทำเป็นไม่ได้ยินแล้วเดินหนี",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.4,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 0,
+          message: "เขารำคาญเลยไปเอง รอดตัวไปแบบงงๆ"
+        },
+        failOutcome: {
+          money: 0,
+          resources: -200,
+          morale: -30,
+          message: "คืนนั้นน้ำมันรถขุดหายหมดถัง แถมโดนปล่อยลมยางทุกคัน"
+        }
+      },
+      {
+        label: "ชวนผู้ใหญ่บ้านไปเลี้ยงฉลองใหญ่",
+        costMoney: 300,
+        costResources: 0,
+        costMorale: 15,
+        successRate: 0.7,
+        successOutcome: {
+          money: 0,
+          resources: 100,
+          morale: 30,
+          message: "คุยถูกคอ ผู้ใหญ่บ้านสั่งลูกน้องมาช่วยขุดถนนฟรีๆ เลย"
+        },
+        failOutcome: {
+          money: -300,
+          resources: 0,
+          morale: -10,
+          message: "เขาเมาแล้วเรื้อน ทำลายข้าวของในที่ทำงานคุณยับเยิน"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_023",
+    title: "วิกฤตราคาน้ำมันและยางมะตอยพุ่งพรวด",
+    description: "สงครามในต่างประเทศทำให้ราคาน้ำมันพุ่งสูงขึ้นเป็นประวัติการณ์ งบที่คุณตั้งไว้สำหรับวัสดุไม่เพียงพอเสียแล้ว",
+    options: [
+      {
+        label: "ผสมทรายเพิ่มเข้าไปในยางมะตอย",
+        costMoney: 0,
+        costResources: 50,
+        costMorale: 5,
+        successRate: 0.6,
+        successOutcome: {
+          money: 250,
+          resources: 0,
+          morale: -5,
+          message: "ประหยัดงบได้เยอะ สีถนนดูดำดีไม่มีใครสงสัย"
+        },
+        failOutcome: {
+          money: -300,
+          resources: 0,
+          morale: -25,
+          message: "ถนนร่อนเป็นแผ่นๆ เหมือนช็อกโกแลตกรอบ โดนสั่งรื้อทำใหม่"
+        }
+      },
+      {
+        label: "สั่งหยุดงานชั่วคราวเพื่อรอราคาลง",
+        costMoney: 100,
+        costResources: 0,
+        costMorale: 20,
+        successRate: 0.5,
+        successOutcome: {
+          money: 0,
+          resources: 100,
+          morale: -10,
+          message: "โชคดีราคาน้ำมันลงพอดี ประหยัดเงินไปได้ก้อนใหญ่"
+        },
+        failOutcome: {
+          money: -200,
+          resources: 0,
+          morale: -40,
+          message: "โดนค่าปรับส่งงานล่าช้า แพงกว่าค่าน้ำมันที่ประหยัดได้อีก"
+        }
+      },
+      {
+        label: "เจรจาขอ 'งบกลาง' เพิ่มจากหลวง",
+        costMoney: 150,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.2,
+        successOutcome: {
+          money: 500,
+          resources: 0,
+          morale: 20,
+          message: "เส้นสายคุณทำงานได้ผล! ได้งบพิเศษมาโปะส่วนต่าง"
+        },
+        failOutcome: {
+          money: -150,
+          resources: 0,
+          morale: -15,
+          message: "เอกสารหายในกองเอกสารของกระทรวง เสียค่าเดินเรื่องฟรี"
+        }
+      },
+      {
+        label: "เปลี่ยนมาใช้แรงงานคนขุดแทนเครื่องจักร",
+        costMoney: 50,
+        costResources: 300,
+        costMorale: 40,
+        successRate: 0.75,
+        successOutcome: {
+          money: 200,
+          resources: 0,
+          morale: -30,
+          message: "ประหยัดน้ำมันได้จริง แต่น้ำตาคนงานแทบกระเด็น"
+        },
+        failOutcome: {
+          money: -100,
+          resources: 0,
+          morale: -50,
+          message: "คนงานพากันลาออกเกือบยกชุดเพราะทำงานหนักเกินมนุษย์"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_024",
+    title: "ข่าวลือว่าบริษัทกำลังจะล้มละลาย",
+    description: "มีเฟกนิวส์หลุดออกมาว่าคุณหมุนเงินไม่ทันและจะไม่จ่ายค่าจ้างงวดหน้า คนงานเริ่มจับกลุ่มคุยกันและหยุดเดินเครื่องจักร",
+    options: [
+      {
+        label: "จ่ายโบนัสล่วงหน้าทันทีเพื่อซื้อใจ",
+        costMoney: 450,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.9,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 50,
+          message: "ทุกคนกลับมาทำงานอย่างบ้าคลั่ง เชื่อมั่นในตัวคุณเต็มร้อย"
+        },
+        failOutcome: {
+          money: -450,
+          resources: 0,
+          morale: 10,
+          message: "จ่ายเงินไปแล้ว แต่คนงานบางส่วนก็ยังลาออกไปอยู่ดี"
+        }
+      },
+      {
+        label: "ไล่หัวโจกที่ปล่อยข่าวออก",
+        costMoney: 50,
+        costResources: 0,
+        costMorale: 30,
+        successRate: 0.5,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 20,
+          message: "คนงานที่เหลือหวาดกลัวและกลับไปทำงานตามปกติ"
+        },
+        failOutcome: {
+          money: -100,
+          resources: 0,
+          morale: -50,
+          message: "เกิดการสไตรค์หยุดงานทั้งไซด์ สื่อเริ่มมาทำข่าว"
+        }
+      },
+      {
+        label: "จัดงานปาร์ตี้หมูกระทะปลอบใจ",
+        costMoney: 100,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.65,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 40,
+          message: "หมูกระทะเยียวยาทุกสิ่ง ข่าวลือหายไปพร้อมเสียงเคี้ยว"
+        },
+        failOutcome: {
+          money: -100,
+          resources: 0,
+          morale: -20,
+          message: "คนงานกินเสร็จก็กลับไปประท้วงต่อ บอกว่ากินส่วนกิน งานส่วนงาน"
+        }
+      },
+      {
+        label: "สร้างภาพลักษณ์ใหม่ผ่านโซเชียล",
+        costMoney: 200,
+        costResources: 0,
+        costMorale: 15,
+        successRate: 0.4,
+        successOutcome: {
+          money: 100,
+          resources: 0,
+          morale: 25,
+          message: "กลายเป็นบริษัทขวัญใจชาวเน็ต คนงานภูมิใจที่ได้อยู่สังกัดนี้"
+        },
+        failOutcome: {
+          money: -200,
+          resources: 0,
+          morale: -10,
+          message: "โดนชาวเน็ตขุดวีรกรรมเก่ามาแฉซ้ำ สถานการณ์แย่ลงกว่าเดิม"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_025",
+    title: "ท่อประปาแตกใต้ถนนที่เพิ่งสร้างเสร็จ",
+    description: "ความผิดพลาดของทีมสำรวจทำให้ท่อประปาหลักแตก น้ำทะลักขึ้นมาทำให้ผิวถนนที่เพิ่งปูเสร็จพังทลาย การประปาเรียกค่าเสียหาย",
+    options: [
+      {
+        label: "โบ้ยความผิดให้การประปาที่วางท่อตื้น",
+        costMoney: 100,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.3,
+        successOutcome: {
+          money: 300,
+          resources: 0,
+          morale: 10,
+          message: "ชนะคดี! การประปาต้องจ่ายค่าซ่อมถนนให้คุณด้วย"
+        },
+        failOutcome: {
+          money: -400,
+          resources: 0,
+          morale: -30,
+          message: "แพ้คดีราบคาบ แถมโดนแบล็กลิสต์งานหลวงในอนาคต"
+        }
+      },
+      {
+        label: "รีบซ่อมแบบ 'ผักชีโรยหน้า'",
+        costMoney: 50,
+        costResources: 150,
+        costMorale: 5,
+        successRate: 0.7,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 0,
+          message: "อุดรอยรั่วแล้วเทยางมะตอยทับทันที หวังว่าคงไม่มีใครขุดดู"
+        },
+        failOutcome: {
+          money: -200,
+          resources: -200,
+          morale: -20,
+          message: "พื้นถนนทรุดเป็นโพรงขนาดใหญ่ในวันต่อมา อันตรายสุดๆ"
+        }
+      },
+      {
+        label: "จ้างผู้เชี่ยวชาญมาวางระบบใหม่",
+        costMoney: 350,
+        costResources: 100,
+        costMorale: 20,
+        successRate: 0.9,
+        successOutcome: {
+          money: 0,
+          resources: 50,
+          morale: 30,
+          message: "งานเนี้ยบมาก ชาวบ้านชื่นชมที่แก้ปัญหาอย่างยั่งยืน"
+        },
+        failOutcome: {
+          money: -350,
+          resources: -100,
+          morale: 0,
+          message: "เสียทั้งเงินเสียทั้งเวลา แต่ดันทำท่อระบายน้ำพังเพิ่ม"
+        }
+      },
+      {
+        label: "ปิดถนนหนีไปตั้งหลักสักพัก",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.5,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: -10,
+          message: "น้ำหยุดไหลเองตามธรรมชาติ (ปิดวาล์ว) งานรอดไปได้หวุดหวิด"
+        },
+        failOutcome: {
+          money: -200,
+          resources: 0,
+          morale: -40,
+          message: "ชาวบ้านขาดน้ำใช้เป็นอาทิตย์ รุมด่าเปิงในโซเชียล"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_026",
+    title: "นักการเมืองขอใช้ไซด์งานเป็นที่หาเสียง",
+    description: "ผู้สมัคร ส.ส. เจ้าถิ่นต้องการมาเดินถ่ายรูปบนถนนที่คุณกำลังสร้าง เพื่อโชว์ผลงานพัฒนาพื้นที่ โดยแลกกับ 'ความสะดวก' ในการเบิกจ่าย",
+    options: [
+      {
+        label: "จัดเตรียมป้ายผ้าและพรมแดงต้อนรับ",
+        costMoney: 150,
+        costResources: 50,
+        costMorale: 10,
+        successRate: 0.85,
+        successOutcome: {
+          money: 400,
+          resources: 0,
+          morale: -10,
+          message: "เงินงวดที่ติดค้างถูกโอนเข้าบัญชีคุณทันทีหลังจบงาน"
+        },
+        failOutcome: {
+          money: -150,
+          resources: -50,
+          morale: -30,
+          message: "ฝ่ายตรงข้ามถ่ายรูปไปแฉว่าคุณเอื้อประโยชน์ให้นักการเมือง"
+        }
+      },
+      {
+        label: "ให้เข้าพื้นที่ได้แต่ห้ามขึ้นป้าย",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 5,
+        successRate: 0.5,
+        successOutcome: {
+          money: 100,
+          resources: 0,
+          morale: 10,
+          message: "นักการเมืองพอใจที่ได้รูป คุณก็ไม่ต้องเสี่ยงถูกฟ้อง"
+        },
+        failOutcome: {
+          money: 0,
+          resources: 0,
+          morale: -20,
+          message: "เขาโกรธที่ได้รับการต้อนรับไม่ดี สั่งระงับงบเบิกจ่าย"
+        }
+      },
+      {
+        label: "ปฏิเสธเพราะอ้างเรื่องความปลอดภัย",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.4,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 25,
+          message: "ชาวบ้านชื่นชมที่คุณวางตัวเป็นกลาง ไม่ยุ่งเกี่ยวการเมือง"
+        },
+        failOutcome: {
+          money: -300,
+          resources: 0,
+          morale: -15,
+          message: "โดนกรมแรงงานส่งคนมาสุ่มตรวจหาแรงงานต่างด้าวทุกวัน"
+        }
+      },
+      {
+        label: "เรียกเก็บค่าเช่าสถานที่ถ่ายรูป",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.2,
+        successOutcome: {
+          money: 300,
+          resources: 0,
+          morale: -5,
+          message: "เขายอมจ่ายเพราะอยากได้คะแนนเสียงจริงๆ รวยเละ!"
+        },
+        failOutcome: {
+          money: 0,
+          resources: -100,
+          morale: -20,
+          message: "เขาทำเป็นยอมรับ แต่สั่งย้ายเครื่องจักรคุณออกจากพื้นที่"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_027",
+    title: "วัสดุก่อสร้างหายปริศนาตอนกลางคืน",
+    description: "เหล็กเส้นและถังน้ำมันสูญหายไปเป็นจำนวนมาก ดูเหมือนจะมีเกลือเป็นหนอนในแคมป์คนงานของคุณเอง",
+    options: [
+      {
+        label: "ติดตั้งกล้อง CCTV ทั่วไซด์งาน",
+        costMoney: 200,
+        costResources: 0,
+        costMorale: 5,
+        successRate: 0.8,
+        successOutcome: {
+          money: 0,
+          resources: 150,
+          morale: 10,
+          message: "จับตัวคนขโมยได้ทันควัน ของที่หายไปได้คืนมาบางส่วน"
+        },
+        failOutcome: {
+          money: -200,
+          resources: -50,
+          morale: -10,
+          message: "กล้องถูกพ่นสีสเปรย์ใส่ แถมโจรยังขโมยกล้องไปด้วย"
+        }
+      },
+      {
+        label: "เรียกทุกคนมาเค้นความจริง",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 30,
+        successRate: 0.4,
+        successOutcome: {
+          money: 0,
+          resources: 100,
+          morale: 5,
+          message: "คนขโมยหวาดกลัวจนยอมแอบเอาของมาคืนที่เดิม"
+        },
+        failOutcome: {
+          money: 0,
+          resources: -100,
+          morale: -50,
+          message: "บรรยากาศในแคมป์เสียหมด ทุกคนหวาดระแวงกันเอง"
+        }
+      },
+      {
+        label: "จ้างสายลับปลอมตัวเป็นคนงาน",
+        costMoney: 150,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.7,
+        successOutcome: {
+          money: 50,
+          resources: 200,
+          morale: -5,
+          message: "พบเครือข่ายรับซื้อของโจรในหมู่บ้าน ตัดรากถอนโคนได้สำเร็จ"
+        },
+        failOutcome: {
+          money: -150,
+          resources: -150,
+          morale: -20,
+          message: "สายลับโดนรุมยำจนอ่วม คุณต้องเสียค่ารักษาพยาบาลอีก"
+        }
+      },
+      {
+        label: "ปล่อยไป แล้วบวกราคาเพิ่มในงวดหน้า",
+        costMoney: 0,
+        costResources: 100,
+        costMorale: 0,
+        successRate: 0.6,
+        successOutcome: {
+          money: 200,
+          resources: 0,
+          morale: 0,
+          message: "เนียนๆ ว่าวัสดุขาดตลาด ขอกำไรคืนจากหลวงแทน"
+        },
+        failOutcome: {
+          money: -100,
+          resources: -100,
+          morale: -15,
+          message: "ตรวจสอบพบว่าคุณใช้ทรัพยากรเกินจริง โดนระงับเบิกจ่าย"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_028",
+    title: "เจ้าที่แรง... หรือแค่หาเรื่องกินฟรี?",
+    description: "ร่างทรงประจำหมู่บ้านมาทักว่า ถนนตัดผ่านทางเดินของผีบรรพบุรุษ ต้องจัดงานทำบุญใหญ่และสร้างศาลใหม่ราคาแพง",
+    options: [
+      {
+        label: "จัดงานทำบุญแบบจัดเต็ม",
+        costMoney: 300,
+        costResources: 0,
+        costMorale: 15,
+        successRate: 0.9,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 45,
+          message: "ชาวบ้านเลื่อมใส สบายใจกันถ้วนหน้า งานเดินลื่นปรี๊ด"
+        },
+        failOutcome: {
+          money: -300,
+          resources: 0,
+          morale: -20,
+          message: "จัดงานแล้วฝนดันตกฟ้าผ่ากลางศาล ชาวบ้านยิ่งกลัวกว่าเดิม"
+        }
+      },
+      {
+        label: "จ้างซินแสชื่อดังมา 'แก้เคล็ด' ราคาประหยัด",
+        costMoney: 100,
+        costResources: 0,
+        costMorale: 5,
+        successRate: 0.6,
+        successOutcome: {
+          money: 0,
+          resources: 50,
+          morale: 20,
+          message: "ซินแสบอกว่าที่ตรงนี้เป็นฮวงจุ้ยมังกร งานจะเสร็จไวขึ้น"
+        },
+        failOutcome: {
+          money: -100,
+          resources: 0,
+          morale: -30,
+          message: "ร่างทรงกับซินแสทะเลาะกันนัวเนีย ไซด์งานวุ่นวายสุดๆ"
+        }
+      },
+      {
+        label: "สั่งขุดดินกลบปากร่างทรง",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 20,
+        successRate: 0.3,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 0,
+          message: "ร่างทรงหนีหายไปเองหลังจากคุณขู่ว่าจะแจ้งความฐานต้มตุ๋น"
+        },
+        failOutcome: {
+          money: -200,
+          resources: -50,
+          morale: -45,
+          message: "คนงานขวัญเสีย ไม่กล้าทำงาน จนต้องจ้างคนจากที่อื่นมาแทน"
+        }
+      },
+      {
+        label: "สร้างศาลจำลองจากไม้เหลือใช้",
+        costMoney: 10,
+        costResources: 40,
+        costMorale: 10,
+        successRate: 0.5,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 15,
+          message: "ผีพอใจในความประหยัดของคุณ (หรืออาจจะรำคาญ)"
+        },
+        failOutcome: {
+          money: 0,
+          resources: -80,
+          morale: -20,
+          message: "ศาลพังล้มทับเครื่องจักรในวันรุ่งขึ้น ทุกคนบอกว่าอาถรรพ์"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_029",
+    title: "งานแต่งลูกสาวอธิบดีกรมทางหลวง",
+    description: "คุณได้รับเชิญ (แบบบังคับ) ให้ไปร่วมงานแต่ง และต้อง 'ช่วยงาน' ให้สมฐานะบริษัทผู้รับเหมาเบอร์หนึ่ง",
+    options: [
+      {
+        label: "ใส่ซองเงินสดก้อนโต",
+        costMoney: 400,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.95,
+        successOutcome: {
+          money: 100,
+          resources: 0,
+          morale: 10,
+          message: "อธิบดีจำชื่อคุณได้แม่นยำ งานหน้าได้โครงการใหญ่แน่นอน"
+        },
+        failOutcome: {
+          money: -400,
+          resources: 0,
+          morale: 0,
+          message: "อธิบดีลาออกสายฟ้าแลบในสัปดาห์ต่อมา เงินคุณสูญเปล่า"
+        }
+      },
+      {
+        label: "จัดหาเครื่องดื่มหรูมาช่วยงาน",
+        costMoney: 250,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.75,
+        successOutcome: {
+          money: 0,
+          resources: 50,
+          morale: 20,
+          message: "แขกเหรื่อประทับใจ คุณได้คอนเนคชันใหม่ๆ เพียบ"
+        },
+        failOutcome: {
+          money: -250,
+          resources: 0,
+          morale: -15,
+          message: "คนเมาทะเลาะกันในงาน คุณโดนตำหนิว่าเป็นต้นเหตุ"
+        }
+      },
+      {
+        label: "ส่งกระเช้าดอกไม้และคำอวยพร",
+        costMoney: 50,
+        costResources: 0,
+        costMorale: 5,
+        successRate: 0.3,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 5,
+          message: "อธิบดีชื่นชมในความพอเพียงของคุณ (แปลว่าเขาไม่ชอบหน้า)"
+        },
+        failOutcome: {
+          money: -100,
+          resources: 0,
+          morale: -20,
+          message: "โครงการปัจจุบันถูกตรวจสอบอย่างละเอียดละออผิดปกติ"
+        }
+      },
+      {
+        label: "รับเป็นเจ้าภาพจัดซุ้มอาหาร",
+        costMoney: 200,
+        costResources: 100,
+        costMorale: 15,
+        successRate: 0.8,
+        successOutcome: {
+          money: 150,
+          resources: 0,
+          morale: 30,
+          message: "ซุ้มอาหารของคุณอร่อยที่สุดในงาน ได้ชื่อเสียงไปเต็มๆ"
+        },
+        failOutcome: {
+          money: -200,
+          resources: -100,
+          morale: -10,
+          message: "แขกท้องเสียกันทั้งงาน อธิบดีโกรธจัด"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_030",
+    title: "เร่งงานด่วน! รัฐมนตรีจะมาตรวจเยี่ยม",
+    description: "มีคำสั่งสายฟ้าแลบให้ถนนต้องเสร็จก่อนกำหนด 1 เดือน เพื่อต้อนรับคณะรัฐมนตรีที่ต้องการผลงานด่วน",
+    options: [
+      {
+        label: "จ้างแรงงานเพิ่มเป็น 2 เท่า",
+        costMoney: 400,
+        costResources: 100,
+        costMorale: 20,
+        successRate: 0.8,
+        successOutcome: {
+          money: 300,
+          resources: 0,
+          morale: 20,
+          message: "งานเสร็จทันเวลาแบบเฉียดฉิว ได้รับคำชมจากท่านรัฐมนตรี"
+        },
+        failOutcome: {
+          money: -400,
+          resources: -100,
+          morale: -30,
+          message: "คนงานเยอะเกินไปจนเดินชนกันเอง งานล่าช้ากว่าเดิมอีก"
+        }
+      },
+      {
+        label: "เทราดยางบางๆ เอาแค่พอดูได้",
+        costMoney: 50,
+        costResources: 200,
+        costMorale: 10,
+        successRate: 0.6,
+        successOutcome: {
+          money: 450,
+          resources: 0,
+          morale: -5,
+          message: "รัฐมนตรีเดินบนพรมแดงเลยไม่รู้ว่าข้างล่างคือดินล้วนๆ"
+        },
+        failOutcome: {
+          money: -500,
+          resources: 0,
+          morale: -40,
+          message: "รถขบวนรัฐมนตรีตกหลุมถนนที่เพิ่งสร้างเสร็จ สื่อรุมด่ายับ"
+        }
+      },
+      {
+        label: "จ้างคนมาทาสีเขียวบนกองดินให้ดูสวย",
+        costMoney: 100,
+        costResources: 0,
+        costMorale: 15,
+        successRate: 0.4,
+        successOutcome: {
+          money: 200,
+          resources: 0,
+          morale: 10,
+          message: "ภาพถ่ายทางอากาศดูสวยงามมาก ท่านรัฐมนตรีปลื้มสุดๆ"
+        },
+        failOutcome: {
+          money: -100,
+          resources: -150,
+          morale: -35,
+          message: "ฝนตกสีลอกความแตก กลายเป็นตลกหน้าตายระดับประเทศ"
+        }
+      },
+      {
+        label: "ปฏิเสธและยอมจ่ายค่าปรับล่าช้า",
+        costMoney: 250,
+        costResources: 0,
+        costMorale: 5,
+        successRate: 0.9,
+        successOutcome: {
+          money: -250,
+          resources: 100,
+          morale: 40,
+          message: "รักษาคุณภาพงานได้ยอดเยี่ยม ลูกน้องรักคุณที่เห็นหัวพวกเขา"
+        },
+        failOutcome: {
+          money: -500,
+          resources: 0,
+          morale: -10,
+          message: "นอกจากโดนปรับแล้ว ยังโดนแกล้งให้รื้อถอนงานที่ทำไปแล้ว"
+        }
+      }
   }
+]
 ]
 }
