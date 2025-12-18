@@ -2530,7 +2530,837 @@
           message: "นอกจากโดนปรับแล้ว ยังโดนแกล้งให้รื้อถอนงานที่ทำไปแล้ว"
         }
       }
+    ]
+  },
+  {
+    id: "evt_031",
+    title: "หินนำโชคกลางถนน",
+    description: "คนงานขุดพบหินรูปทรงประหลาดแล้วเชื่อว่าเป็นสิ่งศักดิ์สิทธิ์ ทุกคนหยุดงานเพื่อกราบไหว้และไม่ยอมให้เครื่องจักรเคลื่อนย้ายมัน",
+    options: [
+      {
+        label: "จัดพิธีอัญเชิญอย่างเป็นทางการ",
+        costMoney: 150,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.9,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 40,
+          message: "คนงานแฮปปี้ที่หัวหน้าเข้าใจความเชื่อ ยอมย้ายหินไปไว้ที่ศาลข้างทางและกลับมาทำงานอย่างขยันขันแข็ง"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -20,
+          morale: -10,
+          message: "พิธีดูหลอกลวงจนคนงานไม่พอใจ แถมยังเสียเงินค่าพราหมณ์ปลอมไปฟรีๆ"
+        }
+      },
+      {
+        label: "สั่งให้รถแบ็คโฮยกออกทันที",
+        costMoney: 0,
+        costResources: 20,
+        costMorale: 30,
+        successRate: 0.5,
+        successOutcome: {
+          money: 0,
+          resources: 50,
+          morale: -10,
+          message: "หินถูกย้ายออกไปได้ งานเดินหน้าต่อทันทีแม้จะมีเสียงบ่นพึมพำเรื่องความอัปมงคล"
+        },
+        failOutcome: {
+          money: -200,
+          resources: -50,
+          morale: -40,
+          message: "เครื่องจักรเกิดขัดข้องกะทันหัน คนงานต่างหวาดกลัวและพากันประท้วงหยุดงานเพราะเชื่อว่าเจ้าที่โกรธ"
+        }
+      },
+      {
+        label: "ให้หวยคนงานแลกกับการย้ายหิน",
+        costMoney: 50,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.7,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 45,
+          message: "คุณแกล้งทำเป็นใบ้เลขเด็ด คนงานดีใจรีบย้ายหินเพื่อไปหาซื้อลอตเตอรี่"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -30,
+          morale: -20,
+          message: "ไม่มีใครเชื่อคุณ แถมยังโดนมองว่าลบหลู่สิ่งศักดิ์สิทธิ์ด้วยการเอามาล้อเล่น"
+        }
+      },
+      {
+        label: "ปรับแผนถนนให้หลบหิน",
+        costMoney: 300,
+        costResources: 200,
+        costMorale: 10,
+        successRate: 0.8,
+        successOutcome: {
+          money: -100,
+          resources: -100,
+          morale: 20,
+          message: "คุณยอมเสียทรัพยากรเพิ่มเพื่อเลี่ยงหิน คนงานชื่นชมในความใจกว้างแต่ฝ่ายบัญชีกุมขมับ"
+        },
+        failOutcome: {
+          money: -400,
+          resources: -300,
+          morale: -10,
+          message: "การเปลี่ยนแบบกะทันหันทำให้กรมทางหลวงไม่อนุมัติ และสั่งปรับเงินคุณข้อหาผิดแบบ"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_032",
+    title: "สงครามเครื่องเสียงในแคมป์",
+    description: "คนงานฝั่งอิสานกับฝั่งพม่าเปิดเพลงแข่งกันเสียงดังลั่นแคมป์จนชาวบ้านแถวนั้นขู่จะแจ้งตำรวจ",
+    options: [
+      {
+        label: "ยึดลำโพงให้หมด",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 40,
+        successRate: 0.6,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: -20,
+          message: "ความเงียบสงบกลับคืนมา ชาวบ้านพอใจ แต่คนงานทำหน้าบูดบึ้งทั้งวัน"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -20,
+          morale: -45,
+          message: "คนงานนัดกันประท้วงหยุดงานเพราะหาว่าหัวหน้าเผด็จการเกินไป"
+        }
+      },
+      {
+        label: "จัดจ้างรถแห่มาเปิดให้ฟังร่วมกัน",
+        costMoney: 250,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.85,
+        successOutcome: {
+          money: 0,
+          resources: -30,
+          morale: 50,
+          message: "ทุกคนเต้นด้วยกันอย่างสนุกสนาน ความขัดแย้งหายไปสิ้น ขวัญกำลังใจพุ่งปรี๊ด"
+        },
+        failOutcome: {
+          money: -250,
+          resources: -50,
+          morale: -10,
+          message: "รถแห่มาสายแถมเครื่องเสียงพัง คนงานเซ็งหนักกว่าเดิมและเริ่มทะเลาะกันอีกรอบ"
+        }
+      },
+      {
+        label: "เจรจาขอให้สลับเวลาเปิด",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.75,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 10,
+          message: "ทั้งสองฝ่ายตกลงกันได้ แบ่งเวลาเปิดเพลงอย่างลงตัว ปัญหาสิ้นสุดลง"
+        },
+        failOutcome: {
+          money: -100,
+          resources: 0,
+          morale: -20,
+          message: "ตกลงกันไม่ได้แถมลงไม้ลงมือกัน คุณต้องเสียค่ารักษาพยาบาลให้คนงาน"
+        }
+      },
+      {
+        label: "ติดสินบนชาวบ้านไม่ให้แจ้งความ",
+        costMoney: 200,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.9,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 20,
+          message: "เงินแก้ปัญหาได้เสมอ ชาวบ้านเงียบกริบ คนงานเปิดเพลงเต้นกันต่ออย่างเมามัน"
+        },
+        failOutcome: {
+          money: -200,
+          resources: 0,
+          morale: -30,
+          message: "ชาวบ้านไม่รับเงินแถมยังถ่ายคลิปคุณประจานลงเน็ต เสื่อมเสียชื่อเสียงบริษัท"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_033",
+    title: "ยางมะตอยหายปริศนา",
+    description: "คุณพบว่ายางมะตอยที่สั่งมาหายไปหลายถัง คาดว่ามีคนงานแอบเอาไปขายต่อให้เจ้าอื่น",
+    options: [
+      {
+        label: "ไล่หัวหน้าคนงานออกเพื่อเตือน",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 40,
+        successRate: 0.5,
+        successOutcome: {
+          money: 100,
+          resources: 0,
+          morale: -10,
+          message: "คนงานคนอื่นหวาดกลัวและไม่มีใครกล้าขโมยอีกชั่วคราว"
+        },
+        failOutcome: {
+          money: -150,
+          resources: -50,
+          morale: -50,
+          message: "เกิดการลาออกระนาวเพราะหัวหน้าคนนั้นเป็นที่รักของทุกคน งานหยุดชะงัก"
+        }
+      },
+      {
+        label: "ติดตั้งกล้องวงจรปิดรอบไซต์",
+        costMoney: 350,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.95,
+        successOutcome: {
+          money: 0,
+          resources: 150,
+          morale: 5,
+          message: "คุณจับโจรได้คาหนังคาเขา ปัญหาการขโมยของสิ้นสุดลงทันที"
+        },
+        failOutcome: {
+          money: -350,
+          resources: -20,
+          morale: -5,
+          message: "กล้องถูกทุบทำลายในคืนแรก ทรัพยากรยังหายต่อไปและเสียค่ากล้องฟรี"
+        }
+      },
+      {
+        label: "หักเงินเดือนทุกคนหารเฉลี่ย",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 50,
+        successRate: 0.4,
+        successOutcome: {
+          money: 200,
+          resources: 50,
+          morale: -40,
+          message: "คุณได้เงินชดเชยค่าของคืนมา แต่บรรยากาศในไซต์งานตึงเครียดสุดๆ"
+        },
+        failOutcome: {
+          money: -100,
+          resources: -100,
+          morale: -50,
+          message: "คนงานรวมตัวกันประท้วงและขู่จะทำลายเครื่องจักรหากคุณไม่คืนเงิน"
+        }
+      },
+      {
+        label: "แกล้งทำเป็นไม่รู้แต่แอบสุ่มตรวจ",
+        costMoney: 50,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.7,
+        successOutcome: {
+          money: 0,
+          resources: 100,
+          morale: 0,
+          message: "คุณจับได้ในขณะกระทำผิด ของที่เหลือถูกนำกลับมาคืนได้ทันเวลา"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -150,
+          morale: -5,
+          message: "พวกโจรไหวตัวทันและรีบขนของหนีไปจนหมดสต็อก"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_034",
+    title: "เจ้าพ่อท้องถิ่นขอเก็บค่าผ่านทาง",
+    description: "มีกลุ่มชายฉกรรจ์อ้างเป็นเจ้าถิ่น มาขอเก็บ 'ค่าดูแล' เครื่องจักรและคนงานรายเดือน",
+    options: [
+      {
+        label: "จ่ายเงินตามที่ขอตัดปัญหา",
+        costMoney: 400,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.9,
+        successOutcome: {
+          money: 0,
+          resources: 50,
+          morale: 10,
+          message: "พวกนั้นยอมอำนวยความสะดวกให้ แถมยังช่วยดูเฝ้าไซต์งานตอนกลางคืนด้วย"
+        },
+        failOutcome: {
+          money: -400,
+          resources: -50,
+          morale: -20,
+          message: "จ่ายไปแล้วพวกนั้นกลับมาขอเพิ่มอีกในอาทิตย์ถัดไป กลายเป็นเบี้ยล่างยาว"
+        }
+      },
+      {
+        label: "แจ้งตำรวจท้องที่เข้าจัดการ",
+        costMoney: 150,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.5,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 30,
+          message: "ตำรวจจับกุมกลุ่มอิทธิพลได้หมด ไซต์งานกลับมาสงบสุขและปลอดภัย"
+        },
+        failOutcome: {
+          money: -150,
+          resources: -200,
+          morale: -40,
+          message: "ตำรวจกับเจ้าพ่อเป็นพวกเดียวกัน เครื่องจักรของคุณถูกลอบเผาทำลายในคืนนั้น"
+        }
+      },
+      {
+        label: "จ้างกลุ่มนั้นมาเป็นคนคุมงาน",
+        costMoney: 250,
+        costResources: 0,
+        costMorale: 15,
+        successRate: 0.75,
+        successOutcome: {
+          money: 0,
+          resources: 100,
+          morale: 15,
+          message: "เปลี่ยนศัตรูเป็นมิตร งานเดินหน้าไวขึ้นเพราะไม่มีใครกล้ามายุ่งกับไซต์งานคุณ"
+        },
+        failOutcome: {
+          money: -300,
+          resources: -100,
+          morale: -30,
+          message: "พวกนั้นมานั่งกินเหล้าในงาน ไม่ช่วยทำอะไรแถมยังข่มขู่คนงานของคุณ"
+        }
+      },
+      {
+        label: "ท้าดวลตัวต่อตัว (หัวหน้าต่อหัวหน้า)",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 20,
+        successRate: 0.3,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 50,
+          message: "คุณชนะใจลูกน้องและเจ้าถิ่น พวกเขายอมสยบและขอเข้ามาเป็นลูกน้องคุณฟรีๆ"
+        },
+        failOutcome: {
+          money: -200,
+          resources: 0,
+          morale: -50,
+          message: "คุณโดนอัดน่วมจนต้องเข้าโรงพยาบาล เสียทั้งเงินค่ารักษาและเสียหน้าต่อลูกน้อง"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_035",
+    title: "เมียหลวงบุกไซต์งาน",
+    description: "ภรรยาของหัวหน้าช่างบุกมาด่าทอสามีถึงกลางไซต์งานเรื่องแอบเลี้ยงกิ๊ก ทำให้งานหยุดชะงัก",
+    options: [
+      {
+        label: "ทำตัวเป็นคนกลางไกล่เกลี่ย",
+        costMoney: 50,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.6,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 20,
+          message: "คุณช่วยคุยจนทั้งคู่ยอมกลับไปเคลียร์ที่บ้าน งานดำเนินต่อได้"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -20,
+          morale: -20,
+          message: "คุณโดนลูกหลงโดนตบหน้า แถมทั้งคู่ยังทะเลาะหนักกว่าเดิม"
+        }
+      },
+      {
+        label: "สั่งพักงานช่างคนนั้นชั่วคราว",
+        costMoney: 0,
+        costResources: 80,
+        costMorale: 10,
+        successRate: 0.8,
+        successOutcome: {
+          money: 0,
+          resources: -50,
+          morale: 5,
+          message: "กำจัดต้นเหตุความวุ่นวายออกไปก่อน ไซต์งานกลับมาสงบแต่ขาดมือดี"
+        },
+        failOutcome: {
+          money: -100,
+          resources: -150,
+          morale: -30,
+          message: "งานล่าช้าอย่างหนักเพราะไม่มีใครคุมงานแทนช่างคนนั้นได้"
+        }
+      },
+      {
+        label: "เหมาหมูกระทะมาเบี่ยงเบนความสนใจ",
+        costMoney: 150,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.7,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 40,
+          message: "เมียหลวงเห็นแก่ของกินเลยยอมสงบปากสงบคำ คนงานได้กินฟรีมีแรงทำงาน"
+        },
+        failOutcome: {
+          money: -150,
+          resources: -10,
+          morale: -10,
+          message: "เมียหลวงปัดจานหมูกระทะทิ้ง ความวุ่นวายทวีคูณขึ้นไปอีก"
+        }
+      },
+      {
+        label: "ไล่ออกไปนอกรั้วไซต์งานทั้งคู่",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 30,
+        successRate: 0.5,
+        successOutcome: {
+          money: 0,
+          resources: 10,
+          morale: -10,
+          message: "ความเด็ดขาดทำให้ทุกคนรีบกลับไปทำงาน แต่หัวหน้าช่างแอบเคืองคุณ"
+        },
+        failOutcome: {
+          money: -200,
+          resources: -100,
+          morale: -40,
+          message: "คนงานพากันไม่พอใจที่คุณแล้งน้ำใจ เกิดการนินทาลับหลังและทำงานช้าลง"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_036",
+    title: "สจ. ขอดินไปถมที่ส่วนตัว",
+    description: "สมาชิกสภาจังหวัด (สจ.) มาขอให้คุณเจียดดินและเครื่องจักรไปช่วยถมที่บ้านพักของเขา",
+    options: [
+      {
+        label: "ทำให้ฟรีเพื่อสายสัมพันธ์",
+        costMoney: 100,
+        costResources: 300,
+        costMorale: 10,
+        successRate: 0.9,
+        successOutcome: {
+          money: 450,
+          resources: -200,
+          morale: 20,
+          message: "สจ. พอใจมาก ช่วยผลักดันงบประมาณโครงการหน้าให้คุณอย่างรวดเร็ว"
+        },
+        failOutcome: {
+          money: -100,
+          resources: -300,
+          morale: -20,
+          message: "ฝ่ายตรวจสอบพบว่ามีการใช้ทรัพยากรผิดวัตถุประสงค์ คุณโดนสอบสวน"
+        }
+      },
+      {
+        label: "ปฏิเสธอย่างสุภาพอ้างระเบียบ",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.5,
+        successOutcome: {
+          money: 0,
+          resources: 50,
+          morale: 10,
+          message: "สจ. ยอมเข้าใจและจากไปโดยดี ทรัพยากรบริษัทยังอยู่ครบ"
+        },
+        failOutcome: {
+          money: -200,
+          resources: 0,
+          morale: -30,
+          message: "คุณโดน สจ. เขม่น และถูกสั่งระงับการเบิกจ่ายงวดงานอย่างไม่มีเหตุผล"
+        }
+      },
+      {
+        label: "ขายดินให้ในราคาพิเศษ",
+        costMoney: 0,
+        costResources: 200,
+        costMorale: 0,
+        successRate: 0.75,
+        successOutcome: {
+          money: 200,
+          resources: -150,
+          morale: 0,
+          message: "วิน-วิน ทั้งสองฝ่าย คุณได้เงินสดเข้ากระเป๋า สจ. ได้ของราคาถูก"
+        },
+        failOutcome: {
+          money: -100,
+          resources: -200,
+          morale: -10,
+          message: "สจ. โกรธที่คุณหน้าเลือดและพยายามกลั่นแกล้งคุณในที่ประชุมจังหวัด"
+        }
+      },
+      {
+        label: "แกล้งทำเครื่องจักรเสีย",
+        costMoney: 50,
+        costResources: 20,
+        costMorale: 0,
+        successRate: 0.6,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 0,
+          message: "สจ. เชื่อว่าเครื่องจักรพังจริง เลยไปขอเจ้าอื่นแทน รอดตัวไปแบบเนียนๆ"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -100,
+          morale: -10,
+          message: "สจ. จับได้ว่าคุณโกหก และสั่งเจ้าหน้าที่มาตรวจสภาพเครื่องจักรอย่างละเอียด"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_037",
+    title: "น้ำมันรั่วลงนาชาวบ้าน",
+    description: "ถังน้ำมันสำรองในไซต์งานรั่วไหลลงไปในนาข้าวข้างๆ ทำให้ต้นข้าวตายเรียบ",
+    options: [
+      {
+        label: "จ่ายค่าชดเชยให้เกินจริง",
+        costMoney: 450,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.95,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 45,
+          message: "ชาวบ้านยิ้มแก้มปริและชมว่าคุณเป็นผู้รับเหมาที่มีคุณธรรมสูงสุดๆ"
+        },
+        failOutcome: {
+          money: -450,
+          resources: 0,
+          morale: -10,
+          message: "ชาวบ้านคนอื่นพอรู้ข่าวก็แห่กันมาเรียกร้องค่าเสียหายเท็จเพิ่ม"
+        }
+      },
+      {
+        label: "แอบส่งคนไปขุดดินกลบตอนกลางคืน",
+        costMoney: 50,
+        costResources: 100,
+        costMorale: 20,
+        successRate: 0.4,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 0,
+          message: "ทำลายหลักฐานได้สำเร็จ ไม่มีใครรู้เรื่องน้ำมันรั่ว"
+        },
+        failOutcome: {
+          money: -300,
+          resources: -50,
+          morale: -45,
+          message: "โดนชาวบ้านจับได้ขณะแอบกลบดิน เรื่องบานปลายจนถึงขั้นฟ้องร้อง"
+        }
+      },
+      {
+        label: "ต่อรองจ่ายตามราคาประเมินรัฐ",
+        costMoney: 150,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.7,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 10,
+          message: "ชาวบ้านยอมรับเงินแม้จะไม่ค่อยพอใจนัก ปัญหายุติลง"
+        },
+        failOutcome: {
+          money: -150,
+          resources: 0,
+          morale: -30,
+          message: "ชาวบ้านประท้วงปิดทางเข้าไซต์งานเพราะมองว่าคุณกดราคา"
+        }
+      },
+      {
+        label: "โบ้ยความผิดให้ซัพพลายเออร์น้ำมัน",
+        costMoney: 50,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.5,
+        successOutcome: {
+          money: 100,
+          resources: 0,
+          morale: 0,
+          message: "บริษัทน้ำมันยอมรับผิดและจ่ายค่าเสียหายแทนคุณทั้งหมด"
+        },
+        failOutcome: {
+          money: -100,
+          resources: -50,
+          morale: -20,
+          message: "ซัพพลายเออร์โกรธและยกเลิกการส่งน้ำมันให้ไซต์งานคุณทันที"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_038",
+    title: "โรคระบาดท้องร่วงในไซต์",
+    description: "คนงานเกือบครึ่งไซต์มีอาการท้องร่วงอย่างรุนแรงหลังจากกินส้มตำจากแม่ค้าหน้าไซต์งาน",
+    options: [
+      {
+        label: "เหมาหมอมาตรวจถึงแคมป์",
+        costMoney: 300,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.9,
+        successOutcome: {
+          money: 0,
+          resources: 100,
+          morale: 45,
+          message: "คนงานหายเร็วและซาบซึ้งใจ กลับมาทำงานได้ไวกว่าที่คิด"
+        },
+        failOutcome: {
+          money: -300,
+          resources: -100,
+          morale: -10,
+          message: "หมอวินิจฉัยผิด อาการคนงานไม่ดีขึ้น แถมเสียเงินฟรี"
+        }
+      },
+      {
+        label: "ให้คนงานพักรักษาตัวตามยถากรรม",
+        costMoney: 0,
+        costResources: 400,
+        costMorale: 45,
+        successRate: 0.3,
+        successOutcome: {
+          money: 100,
+          resources: -100,
+          morale: -20,
+          message: "ส่วนใหญ่หายเองได้ใน 3 วัน แต่งานดีเลย์ไปมาก"
+        },
+        failOutcome: {
+          money: -200,
+          resources: -300,
+          morale: -50,
+          message: "คนงานอาการหนักต้องหามส่งโรงพยาบาลวุ่นวาย งานหยุดชะงักถาวร"
+        }
+      },
+      {
+        label: "ไล่แม่ค้าส้มตำออกไปและสั่งแบน",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 20,
+        successRate: 0.7,
+        successOutcome: {
+          money: 0,
+          resources: 20,
+          morale: 5,
+          message: "ตัดต้นตอปัญหาได้ คนงานเข้าใจและระวังการกินมากขึ้น"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -20,
+          morale: -30,
+          message: "แม่ค้าคนนั้นเป็นญาติกับคนงานกลุ่มใหญ่ เกิดความไม่พอใจในแคมป์"
+        }
+      },
+      {
+        label: "แจกเหล้าขาวผสมยาแก้ท้องเสีย",
+        costMoney: 80,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.45,
+        successOutcome: {
+          money: 0,
+          resources: 50,
+          morale: 40,
+          message: "สูตรโบราณได้ผล! คนงานดีดจัด ทำงานลืมตายหายปวดท้อง"
+        },
+        failOutcome: {
+          money: -150,
+          resources: -150,
+          morale: -40,
+          message: "นอกจากไม่หายแล้วยังเมาค้าง ทำงานไม่ได้หนักกว่าเดิม"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_039",
+    title: "สิบล้อแต่งซิ่งทำถนนพัง",
+    description: "ลูกน้องคุณแอบเอารถบรรทุกบริษัทไปแต่งซิ่งและขับดริฟต์บนถนนที่เพิ่งลาดยางใหม่ๆ จนพังยับ",
+    options: [
+      {
+        label: "หักเงินเดือนและให้ซ่อมเอง",
+        costMoney: 0,
+        costResources: 100,
+        costMorale: 30,
+        successRate: 0.7,
+        successOutcome: {
+          money: 150,
+          resources: 0,
+          morale: -10,
+          message: "คนงานสำนึกผิดและช่วยกันซ่อมจนกลับมาดีเหมือนเดิม"
+        },
+        failOutcome: {
+          money: -100,
+          resources: -200,
+          morale: -40,
+          message: "คนงานหนีงานทิ้งภาระไว้ให้คุณจัดการคนเดียว"
+        }
+      },
+      {
+        label: "ส่งไปแข่งในสนามจริงเลย",
+        costMoney: 200,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.4,
+        successOutcome: {
+          money: 500,
+          resources: 0,
+          morale: 50,
+          message: "มันดันชนะ! ได้เงินรางวัลมาโปะค่าซ่อมถนน แถมชื่อเสียงบริษัทดังกระหึ่ม"
+        },
+        failOutcome: {
+          money: -400,
+          resources: -300,
+          morale: -20,
+          message: "รถพังยับเยิน ถนนก็ไม่ได้ซ่อม เสียเงินเสียของเสียเวลา"
+        }
+      },
+      {
+        label: "ด่ายับกลางที่ประชุมและพักงาน",
+        costMoney: 0,
+        costResources: 50,
+        costMorale: 20,
+        successRate: 0.85,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: -15,
+          message: "ทุกคนกลัวตัวสั่นและไม่มีใครกล้าทำเรื่องพิเรนทร์อีก"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -100,
+          morale: -30,
+          message: "คนงานที่เก่งที่สุดลาออกเพราะอับอาย งานหยุดชะงัก"
+        }
+      },
+      {
+        label: "เนียนว่าเป็นรอยล้อจากผู้บุกรุก",
+        costMoney: 100,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.5,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 10,
+          message: "กรมทางหลวงเชื่อและให้งบซ่อมแซมส่วนเกินมาเพิ่ม"
+        },
+        failOutcome: {
+          money: -350,
+          resources: -200,
+          morale: -20,
+          message: "กล้องวงจรปิดข้างทางจับได้ว่าเป็รถบริษัทคุณ คุณโดนปรับหนัก"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_040",
+    title: "งบประมาณค้างจ่ายจากรัฐ",
+    description: "รัฐบาลเลื่อนจ่ายเงินงวดงานออกไปอีก 3 เดือน แต่คุณต้องจ่ายค่าแรงคนงานพรุ่งนี้แล้ว",
+    options: [
+      {
+        label: "กู้เงินนอกระบบมาจ่ายก่อน",
+        costMoney: 500,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.8,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 50,
+          message: "คนงานดีใจที่ได้เงินตรงเวลา ขยันทำงานสุดฝีมือ"
+        },
+        failOutcome: {
+          money: -500,
+          resources: -50,
+          morale: -20,
+          message: "ดอกเบี้ยพุ่งสูงจนคุณเริ่มแบกไม่ไหว ฐานะทางการเงินวิกฤต"
+        }
+      },
+      {
+        label: "เรียกประชุมคนงานขอติดไว้ก่อน",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 50,
+        successRate: 0.5,
+        successOutcome: {
+          money: 200,
+          resources: 0,
+          morale: -10,
+          message: "คนงานยอมเข้าใจเพราะเชื่อใจคุณ แต่ทำงานช้าลงอย่างเห็นได้ชัด"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -400,
+          morale: -50,
+          message: "คนงานประท้วงหยุดงานและบางส่วนพากันลาออกทันที"
+        }
+      },
+      {
+        label: "ขายวัสดุก่อสร้างบางส่วนกิน",
+        costMoney: 0,
+        costResources: 400,
+        costMorale: 0,
+        successRate: 0.7,
+        successOutcome: {
+          money: 400,
+          resources: -400,
+          morale: 20,
+          message: "มีเงินจ่ายค่าแรงแต่ขาดวัสดุ ต้องรอเงินงวดหน้ามาซื้อใหม่"
+        },
+        failOutcome: {
+          money: -100,
+          resources: -400,
+          morale: -10,
+          message: "ขายของได้ราคาต่ำเตี้ยดิน แถมไม่มีของทำงานต่อ"
+        }
+      },
+      {
+        label: "เข้าไปกดดันเจ้าหน้าที่ที่สำนักงาน",
+        costMoney: 150,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.4,
+        successOutcome: {
+          money: 500,
+          resources: 0,
+          morale: 20,
+          message: "ลูกตื๊อได้ผล! เจ้าหน้าที่รีบทำเรื่องเบิกจ่ายให้คุณเป็นกรณีพิเศษ"
+        },
+        failOutcome: {
+          money: -150,
+          resources: 0,
+          morale: -30,
+          message: "โดนเจ้าหน้าที่หมั่นไส้และแกล้งดองเรื่องไว้ให้นานกว่าเดิม"
+        }
+      }
+    ]
   }
-]
 ]
 }
