@@ -3361,6 +3361,421 @@
         }
       }
     ]
-  }
-]
+  },
+  {
+    id: "evt_041",
+    title: "จอมปลวกศักดิ์สิทธิ์หรือถิ่นที่อยู่มดหายาก?",
+    description: "มีกลุ่มนักอนุรักษ์มายืนล้อมจอมปลวกขนาดใหญ่ที่อยู่กลางแนววางท่อระบายน้ำ โดยอ้างว่าเป็นที่อยู่ของมดสายพันธุ์โบราณที่ใกล้สูญพันธุ์ และห้ามคุณไถกลบเด็ดขาด",
+    options: [
+      {
+        label: "จ้างผู้เชี่ยวชาญมาช่วยย้ายมด",
+        costMoney: 150,
+        costResources: 20,
+        costMorale: 0,
+        successRate: 0.85,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 20,
+          message: "ผู้เชี่ยวชาญย้ายมดไปที่ใหม่ได้สำเร็จ นักอนุรักษ์พอใจมากและชมเชยคุณผ่านสื่อ"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -10,
+          morale: -15,
+          message: "ผู้เชี่ยวชาญทำมดตายไปครึ่งรัง นักอนุรักษ์โกรธจัดและขู่จะฟ้องร้อง"
+        }
+      },
+      {
+        label: "ลักลอบไถกลบตอนกลางคืน",
+        costMoney: 50,
+        costResources: 10,
+        costMorale: 0,
+        successRate: 0.4,
+        successOutcome: {
+          money: 100,
+          resources: 50,
+          morale: 0,
+          message: "งานเดินหน้าต่อได้อย่างรวดเร็วโดยไม่มีใครเห็นหลักฐาน"
+        },
+        failOutcome: {
+          money: -200,
+          resources: 0,
+          morale: -40,
+          message: "มีคนแอบถ่ายคลิปไว้ได้! บริษัทของคุณโดนประณามอย่างหนักและเสียค่าปรับอ่วม"
+        }
+      },
+      {
+        label: "บริจาคเงินเข้ามูลนิธิของกลุ่มนักอนุรักษ์",
+        costMoney: 300,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.9,
+        successOutcome: {
+          money: 0,
+          resources: 30,
+          morale: 10,
+          message: "นักอนุรักษ์ยอมถอยไปพร้อมกับเงินบริจาค และบอกว่ามดอาจจะอพยพไปเองได้"
+        },
+        failOutcome: {
+          money: -100,
+          resources: 0,
+          morale: -20,
+          message: "พวกเขาหาว่าคุณพยายามติดสินบน และประกาศปักหลักประท้วงยาวนานขึ้น"
+        }
+      },
+      {
+        label: "ปรับแบบถนนให้โค้งหลบจอมปลวก",
+        costMoney: 200,
+        costResources: 150,
+        costMorale: 20,
+        successRate: 0.95,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 40,
+          message: "ถนนโค้งแปลกๆ แต่ทุกคนแฮปปี้ คุณกลายเป็นผู้รับเหมาหัวใจสีเขียว"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -100,
+          morale: -10,
+          message: "การแก้แบบล่าช้าทำให้เครื่องจักรว่างงานและเสียทรัพยากรไปเปล่าๆ"
+        }
+      }
+    ]
+    },
+  {
+    id: "evt_042",
+    title: "กอดต้นไม้เหี่ยวเพื่อโลก",
+    description: "กลุ่มวัยรุ่นนักอนุรักษ์พากันมาล่ามโซ่ตัวเองติดกับต้นจามจุรีที่ตายซากแล้ว เพื่อประท้วงการขยายเลนถนน โดยบอกว่าแม้ต้นไม้จะตายแต่จิตวิญญาณยังอยู่",
+    options: [
+      {
+        label: "จัดกิจกรรม 'ย้ายวิญญาณต้นไม้'",
+        costMoney: 80,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.75,
+        successOutcome: {
+          money: 0,
+          resources: 20,
+          morale: 30,
+          message: "การทำพิธีหลอกๆ ได้ผล พวกเขายอมปลดโซ่และย้ายไปประท้วงที่อื่นแทน"
+        },
+        failOutcome: {
+          money: -30,
+          resources: 0,
+          morale: -20,
+          message: "พวกเขาดูออกว่าคุณลบหลู่ความเชื่อ และเรียกพวกมาเพิ่มอีก"
+        }
+      },
+      {
+        label: "นำใบรับรองจากกรมป่าไม้มายืนยัน",
+        costMoney: 20,
+        costResources: 10,
+        costMorale: 0,
+        successRate: 0.5,
+        successOutcome: {
+          money: 0,
+          resources: 50,
+          morale: 10,
+          message: "เอกสารราชการที่ชัดเจนทำให้พวกเขาจำใจต้องเปิดทางให้"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -20,
+          morale: -10,
+          message: "พวกเขาไม่เชื่อเอกสารรัฐ และหาว่าคุณปลอมแปลงมันขึ้นมา"
+        }
+      },
+      {
+        label: "สั่งคนงานล้อมรั้วสังกะสีปิดพื้นที่",
+        costMoney: 40,
+        costResources: 60,
+        costMorale: -10,
+        successRate: 0.65,
+        successOutcome: {
+          money: 0,
+          resources: 40,
+          morale: 0,
+          message: "เมื่อไม่มีคนเห็นและไม่มีใครส่งข้าวส่งน้ำ พวกเขาก็ยอมถอยไปเองในที่สุด"
+        },
+        failOutcome: {
+          money: -100,
+          resources: -30,
+          morale: -30,
+          message: "เกิดการปะทะกันที่แนวรั้ว กลายเป็นข่าวดังในโซเชียลทันที"
+        }
+      },
+      {
+        label: "จ้างวงดนตรีมาเล่นกลบเสียงประท้วง",
+        costMoney: 120,
+        costResources: 0,
+        costMorale: 20,
+        successRate: 0.45,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 45,
+          message: "บรรยากาศเปลี่ยนเป็นงานปาร์ตี้ ทุกคนลืมเรื่องต้นไม้และแยกย้ายกันกลับบ้าน"
+        },
+        failOutcome: {
+          money: -120,
+          resources: -10,
+          morale: -15,
+          message: "เสียเงินค่าจ้างวงดนตรีฟรีๆ แถมยังโดนข้อหาหนวกหูเกินกว่าเหตุดังไปถึงเขต"
+        }
+      }
+    ]
+    },
+  {
+    id: "evt_043",
+    title: "ทางข้ามกบสีชมพู",
+    description: "มีรายงานว่ากบสีชมพูหายากจะข้ามถนนบริเวณนี้ทุกคืนวันพระ นักอนุรักษ์บังคับให้คุณสร้าง 'อุโมงค์กบ' ทุกๆ 50 เมตร ซึ่งไม่ได้อยู่ในสัญญาจ้าง",
+    options: [
+      {
+        label: "สร้างอุโมงค์จำลองขนาดเล็ก",
+        costMoney: 250,
+        costResources: 100,
+        costMorale: 10,
+        successRate: 0.8,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 25,
+          message: "อุโมงค์ราคาถูกใช้งานได้จริง (หรืออย่างน้อยพวกเขาก็เชื่อแบบนั้น)"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -80,
+          morale: -20,
+          message: "อุโมงค์ถล่มเพราะวัสดุไม่ได้มาตรฐาน นักอนุรักษ์เอาเรื่องคุณถึงที่สุด"
+        }
+      },
+      {
+        label: "ติดตั้งป้าย 'โปรดระวังกบ' แทน",
+        costMoney: 30,
+        costResources: 20,
+        costMorale: 0,
+        successRate: 0.3,
+        successOutcome: {
+          money: 0,
+          resources: 50,
+          morale: 10,
+          message: "ป้ายดีไซน์สวยจนนักอนุรักษ์ลืมเรื่องอุโมงค์ไปเลย"
+        },
+        failOutcome: {
+          money: -20,
+          resources: -10,
+          morale: -25,
+          message: "พวกเขาหาว่าคุณมักง่าย และเริ่มขัดขวางการเทยางมะตอย"
+        }
+      },
+      {
+        label: "จ้างชาวบ้านมาช่วยจับกบไปปล่อยที่อื่น",
+        costMoney: 100,
+        costResources: 0,
+        costMorale: 20,
+        successRate: 0.7,
+        successOutcome: {
+          money: 50,
+          resources: 40,
+          morale: 15,
+          message: "ชาวบ้านได้รายได้พิเศษ กบปลอดภัย งานสร้างถนนเดินหน้าต่อ"
+        },
+        failOutcome: {
+          money: -100,
+          resources: 0,
+          morale: -10,
+          message: "ชาวบ้านหากบไม่เจอแม้แต่ตัวเดียว แต่นักอนุรักษ์ยังยืนยันว่ามันมีอยู่จริง"
+        }
+      },
+      {
+        label: "พิสูจน์ทางวิทยาศาสตร์ว่าไม่มีกบ",
+        costMoney: 180,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.6,
+        successOutcome: {
+          money: 0,
+          resources: 80,
+          morale: 5,
+          message: "ผลแล็บยืนยันว่าไม่มีดีเอ็นเอกบในแถบนี้ นักอนุรักษ์จึงยอมสลายตัว"
+        },
+        failOutcome: {
+          money: -180,
+          resources: -30,
+          morale: -30,
+          message: "นักอนุรักษ์หาว่าคุณปลอมผลแล็บและทำการประท้วงที่รุนแรงขึ้น"
+        }
+      }
+    ]
+   },
+  {
+    id: "evt_044",
+    title: "ฝุ่นที่ทำให้ดอกไม้ล่องหนเศร้า",
+    description: "กลุ่มผู้ประท้วงอ้างว่าฝุ่นจากการก่อสร้างกำลังฆ่า 'ดอกหญ้าล่องหน' ที่จะมองเห็นได้เฉพาะผู้ที่มีจิตใจบริสุทธิ์เท่านั้น และสั่งให้คุณหยุดงานจนกว่าจะติดตั้งระบบพ่นละอองน้ำทั่วไซต์",
+    options: [
+      {
+        label: "ซื้อเครื่องพ่นละอองน้ำราคาแพง",
+        costMoney: 400,
+        costResources: 50,
+        costMorale: 30,
+        successRate: 0.95,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 50,
+          message: "ไซต์ก่อสร้างสะอาดเอี่ยม นักอนุรักษ์บอกว่าตอนนี้เห็นดอกไม้บานสะพรั่งแล้ว"
+        },
+        failOutcome: {
+          money: -400,
+          resources: -50,
+          morale: 0,
+          message: "เครื่องเสียตั้งแต่วันแรก และน้ำทำให้หน้าดินเละเทะจนทำงานไม่ได้"
+        }
+      },
+      {
+        label: "แจกแว่นตากันฝุ่นให้กลุ่มนักอนุรักษ์",
+        costMoney: 60,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.25,
+        successOutcome: {
+          money: 0,
+          resources: 30,
+          morale: 20,
+          message: "พวกเขาประทับใจในความใส่ใจ และเชื่อว่าแว่นจะช่วยให้เห็นดอกไม้ชัดขึ้น"
+        },
+        failOutcome: {
+          money: -60,
+          resources: -20,
+          morale: -30,
+          message: "พวกเขาหาว่าคุณล้อเลียนความเชื่อเรื่องดอกไม้ล่องหน"
+        }
+      },
+      {
+        label: "จ้างรถน้ำท้องถิ่นมาฉีดวันละ 2 รอบ",
+        costMoney: 150,
+        costResources: 30,
+        costMorale: 10,
+        successRate: 0.7,
+        successOutcome: {
+          money: 0,
+          resources: 20,
+          morale: 25,
+          message: "วิธีดั้งเดิมได้ผลดี ฝุ่นลดลงและนักอนุรักษ์ก็ยอมรับได้"
+        },
+        failOutcome: {
+          money: -150,
+          resources: -40,
+          morale: -5,
+          message: "รถน้ำมาไม่ตรงเวลา ฝุ่นยังคลุ้งเหมือนเดิม"
+        }
+      },
+      {
+        label: "บอกว่าดอกไม้พวกนั้นย้ายไปที่อื่นแล้ว",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: -10,
+        successRate: 0.15,
+        successOutcome: {
+          money: 200,
+          resources: 100,
+          morale: 10,
+          message: "เหลือเชื่อ! พวกเขาเชื่อคุณและพากันเดินไปดูที่ทุ่งนาห่างออกไป 5 กิโลเมตร"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -100,
+          morale: -40,
+          message: "คำโกหกถูกจับได้ง่ายเกินไป งานของคุณโดนระงับทันที"
+        }
+      }
+    ]
+    },
+  {
+    id: "evt_045",
+    title: "รถบดถนนพลังงานแสงอาทิตย์ (ที่ไม่มีจริง)",
+    description: "นักอนุรักษ์หัวรุนแรงขู่จะนอนขวางรถบดถนน เพราะมันใช้น้ำมันดีเซลซึ่งทำลายชั้นโอโซน เขาต้องการให้คุณเปลี่ยนไปใช้รถบดพลังงานสะอาดเท่านั้น",
+    options: [
+      {
+        label: "พ่นสีเครื่องจักรเป็นสีเขียวสดใส",
+        costMoney: 50,
+        costResources: 10,
+        costMorale: 0,
+        successRate: 0.35,
+        successOutcome: {
+          money: 0,
+          resources: 100,
+          morale: 20,
+          message: "คุณหลอกพวกเขาว่ามันเป็นเทคโนโลยี Eco-Paint ที่ลดมลพิษได้ 100%"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -20,
+          morale: -25,
+          message: "กลิ่นสีที่พ่นใหม่ๆ แรงกว่ากลิ่นน้ำมันเสียอีก พวกเขาโกรธกว่าเดิม"
+        }
+      },
+      {
+        label: "ติดแผงโซลาร์เซลล์ปลอมบนหลังคารถ",
+        costMoney: 120,
+        costResources: 20,
+        costMorale: 10,
+        successRate: 0.6,
+        successOutcome: {
+          money: 0,
+          resources: 150,
+          morale: 35,
+          message: "พวกเขารู้สึกภูมิใจที่ผลักดันนวัตกรรมใหม่ให้เกิดขึ้นในวงการก่อสร้าง"
+        },
+        failOutcome: {
+          money: -120,
+          resources: -50,
+          morale: -15,
+          message: "แผงหลุดร่วงลงมาขณะทำงาน แฉความจริงว่ามันเป็นแค่พลาสติก"
+        }
+      },
+      {
+        label: "ใช้แรงงานคนแบกหินบดถนนชั่วคราว",
+        costMoney: 200,
+        costResources: 300,
+        costMorale: -20,
+        successRate: 0.8,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 40,
+          message: "แม้จะช้าและเปลืองทรัพยากร แต่นักอนุรักษ์ชื่นชมในความพยายามของคุณมาก"
+        },
+        failOutcome: {
+          money: -200,
+          resources: -400,
+          morale: -50,
+          message: "คนงานประท้วงหยุดงานเพราะเหนื่อยเกินไป งานเสียหายหนัก"
+        }
+      },
+      {
+        label: "เจรจาขอลดการใช้เครื่องจักรลงครึ่งหนึ่ง",
+        costMoney: 0,
+        costResources: 200,
+        costMorale: 5,
+        successRate: 0.5,
+        successOutcome: {
+          money: 50,
+          resources: 0,
+          morale: 10,
+          message: "พบกันครึ่งทาง งานเดินช้าลงแต่ไม่ต้องปะทะกัน"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -250,
+          morale: -20,
+          message: "การทำงานครึ่งๆ กลางๆ ทำให้ถนนไม่ได้มาตรฐานและต้องรื้อทำใหม่"
+        }
+      }
+    ]
+   }
+ ]
 }
