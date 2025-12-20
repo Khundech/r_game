@@ -3776,6 +3776,421 @@
         }
       }
     ]
-   }
+   },
+  {
+    id: "evt_046",
+    title: "วิกฤตแคมป์คนงานไอระงม",
+    description: "คนงานในแคมป์เริ่มมีอาการป่วยคล้ายโรคระบาดใหญ่ แต่เส้นตายการส่งมอบถนนเหลืออีกเพียงไม่กี่สัปดาห์ หากคุณหยุดงานตอนนี้จะต้องเสียค่าปรับมหาศาลให้กับกรมทางหลวง",
+    options: [
+      {
+        label: "กักตัวผู้ป่วยและตรวจเชิงรุก",
+        costMoney: 200,
+        costResources: 50,
+        costMorale: 10,
+        successRate: 0.8,
+        successOutcome: {
+          money: 0,
+          resources: 100,
+          morale: 30,
+          message: "คุณควบคุมการระบาดได้ทันเวลา แรงงานที่เหลือมีกำลังใจทำงานต่อเพราะรู้สึกปลอดภัย"
+        },
+        failOutcome: {
+          money: 0,
+          resources: 0,
+          morale: -20,
+          message: "เชื้อกระจายไปครึ่งแคมป์ คุณต้องสูญเสียแรงงานหลักไปหลายคนในการกักตัว"
+        }
+      },
+      {
+        label: "สั่งให้ทุกคนทำงานต่อห้ามบอกใคร",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 20,
+        successRate: 0.3,
+        successOutcome: {
+          money: 100,
+          resources: 100,
+          morale: 10,
+          message: "งานเสร็จทันเวลาโดยที่ไม่มีใครรู้เรื่องอาการป่วย แต่คนงานอ่อนล้ามาก"
+        },
+        failOutcome: {
+          money: -400,
+          resources: -100,
+          morale: -50,
+          message: "เรื่องแดงขึ้นมา ข่าวแพร่สะพัดจนโดนสั่งปิดไซต์งานและปรับหนักฐานละเมิดมาตรการ"
+        }
+      },
+      {
+        label: "จ้างแรงงานชั่วคราวมาเสริม",
+        costMoney: 350,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.9,
+        successOutcome: {
+          money: 0,
+          resources: 300,
+          morale: 10,
+          message: "แรงงานใหม่ช่วยให้งานเดินหน้าต่อได้ทันตามกำหนด แม้จะต้นทุนสูงขึ้น"
+        },
+        failOutcome: {
+          money: -100,
+          resources: 50,
+          morale: -10,
+          message: "แรงงานใหม่ทำงานไม่เป็นระบบ ทำให้เกิดความผิดพลาดในงานโครงสร้าง"
+        }
+      },
+      {
+        label: "ลดงานและยื่นเรื่องขอผ่อนผัน",
+        costMoney: 50,
+        costResources: 100,
+        costMorale: 0,
+        successRate: 0.5,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 10,
+          message: "ราชการยอมรับเหตุสุดวิสัย คุณได้เวลาเพิ่มโดยไม่เสียค่าปรับ"
+        },
+        failOutcome: {
+          money: -200,
+          resources: 0,
+          morale: -10,
+          message: "คำขอถูกปฏิเสธ คุณเสียเวลาไปฟรีๆ และยังต้องทำงานแข่งกับเวลาที่เหลืออยู่น้อย"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_047",
+    title: "ด่านคัดกรองขวางทางขนส่ง",
+    description: "เทศบาลสั่งตั้งด่านตรวจเข้มหน้าไซต์งานเพื่อป้องกันโรค ทำให้รถบรรทุกหินและยางมะตอยจอดติดยาวเป็นกิโลเมตร วัสดุอาจจะเสียหายหากขนมาไม่ทัน",
+    options: [
+      {
+        label: "มอบหน้ากากและเจลให้เจ้าหน้าที่ด่าน",
+        costMoney: 80,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.85,
+        successOutcome: {
+          money: 0,
+          resources: 200,
+          morale: 20,
+          message: "เจ้าหน้าที่ประทับใจในน้ำใจและยอมลัดคิวให้รถขนวัสดุเข้าไซต์ก่อน"
+        },
+        failOutcome: {
+          money: 0,
+          resources: 0,
+          morale: -10,
+          message: "เจ้าหน้าที่รับของไว้แต่ยังคงตรวจละเอียดตามเดิม รถขนวัสดุยังติดเหมือนเดิม"
+        }
+      },
+      {
+        label: "จ่ายค่าธรรมเนียมอำนวยความสะดวก",
+        costMoney: 300,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.95,
+        successOutcome: {
+          money: 0,
+          resources: 400,
+          morale: 0,
+          message: "เงินแก้ปัญหาได้เสมอ รถทุกคันผ่านด่านได้อย่างรวดเร็วไร้การตรวจสอบ"
+        },
+        failOutcome: {
+          money: -300,
+          resources: -50,
+          morale: -20,
+          message: "ถูกหน่วยตรวจซ้อนพบการทุจริต รถถูกกักไว้ตรวจสอบทั้งหมด"
+        }
+      },
+      {
+        label: "ย้ายเวลาขนส่งเป็นช่วงกลางคืน",
+        costMoney: 50,
+        costResources: 100,
+        costMorale: 10,
+        successRate: 0.7,
+        successOutcome: {
+          money: 0,
+          resources: 150,
+          morale: 5,
+          message: "การขนส่งตอนกลางคืนเลี่ยงด่านได้สำเร็จและทำงานได้ต่อเนื่อง"
+        },
+        failOutcome: {
+          money: 0,
+          resources: -50,
+          morale: -15,
+          message: "การทำงานกลางคืนทำให้คนงานเหนื่อยล้าและเกิดอุบัติเหตุเครื่องจักรเล็กน้อย"
+        }
+      },
+      {
+        label: "ขอให้วิศวกรประจำโครงการเจรจา",
+        costMoney: 0,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.45,
+        successOutcome: {
+          money: 0,
+          resources: 100,
+          morale: 10,
+          message: "การใช้ใบรับรองวิชาชีพเจรจาได้ผล เจ้าหน้าที่ยอมผ่อนปรนให้รถขนส่งทางวิศวกรรม"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -50,
+          morale: -5,
+          message: "การเจรจาล้มเหลว เจ้าหน้าที่ยืนยันต้องทำตามกฎระเบียบอย่างเคร่งครัด"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_048",
+    title: "โรงโม่หินปิดตัวชั่วคราว",
+    description: "แหล่งวัตถุดิบหลักของคุณถูกสั่งปิดเนื่องจากเป็นคลัสเตอร์โรคระบาด ทำให้ไม่มีหินมาลงชั้นรองพื้นทาง ถนนที่กำลังสร้างอาจจะต้องชะงักลง",
+    options: [
+      {
+        label: "สั่งหินจากจังหวัดข้างเคียงราคาแพง",
+        costMoney: 450,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.9,
+        successOutcome: {
+          money: 0,
+          resources: 500,
+          morale: 10,
+          message: "หินมาถึงแม้จะแพงแต่ก็ช่วยให้โครงการดำเนินต่อไปได้โดยไม่สะดุด"
+        },
+        failOutcome: {
+          money: -200,
+          resources: 50,
+          morale: -5,
+          message: "การขนส่งข้ามจังหวัดล่าช้ากว่าที่คิด ทำให้งานชะงักไปหลายวัน"
+        }
+      },
+      {
+        label: "ใช้เศษวัสดุเก่ามาบดอัดทดแทน",
+        costMoney: 50,
+        costResources: 200,
+        costMorale: 0,
+        successRate: 0.4,
+        successOutcome: {
+          money: 200,
+          resources: 200,
+          morale: 0,
+          message: "คุณประหยัดเงินไปได้เยอะและงานผ่านการตรวจสอบมาตรฐานเบื้องต้น"
+        },
+        failOutcome: {
+          money: -300,
+          resources: -100,
+          morale: -30,
+          message: "วัสดุไม่ได้มาตรฐาน ถนนยุบตัว คุณต้องรื้อทำใหม่ทั้งหมด"
+        }
+      },
+      {
+        label: "หยุดงานชั่วคราวเพื่อรอดูสถานการณ์",
+        costMoney: 0,
+        costResources: 100,
+        costMorale: 20,
+        successRate: 0.6,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 40,
+          message: "คนงานได้พักผ่อนและสถานการณ์โรคระบาดดีขึ้นก่อนเริ่มงานใหม่"
+        },
+        failOutcome: {
+          money: -450,
+          resources: -50,
+          morale: -10,
+          message: "โดนค่าปรับงานล่าช้ามหาศาล และโรงโม่ยังไม่มีกำหนดเปิดแน่นอน"
+        }
+      },
+      {
+        label: "เจรจาซื้อหินสต็อกเก่าจากคู่แข่ง",
+        costMoney: 300,
+        costResources: 0,
+        costMorale: -10,
+        successRate: 0.75,
+        successOutcome: {
+          money: 0,
+          resources: 300,
+          morale: 0,
+          message: "แม้จะต้องเสียเปรียบให้คู่แข่ง แต่คุณก็ได้วัสดุมาทำงานต่อจนจบ"
+        },
+        failOutcome: {
+          money: -150,
+          resources: 0,
+          morale: -20,
+          message: "คู่แข่งโก่งราคาสูงเกินไปแถมหินที่ส่งมาก็คุณภาพต่ำกว่าที่ตกลง"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_049",
+    title: "ชาวบ้านประท้วงกลัวเชื้อจากไซต์",
+    description: "ชาวบ้านในพื้นที่รวมตัวกันปิดถนนทางเข้าไซต์งาน เพราะเห็นคนงานต่างถิ่นเดินทางเข้าออกบ่อยๆ พวกเขาเรียกร้องให้หยุดงานจนกว่าโรคระบาดจะจบ",
+    options: [
+      {
+        label: "จัดหน่วยพ่นฉีดฆ่าเชื้อในหมู่บ้าน",
+        costMoney: 150,
+        costResources: 0,
+        costMorale: 20,
+        successRate: 0.9,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 45,
+          message: "ชาวบ้านมั่นใจในความปลอดภัยและยอมเปิดทางให้ แถมยังช่วยเป็นหูเป็นตาให้"
+        },
+        failOutcome: {
+          money: -50,
+          resources: 0,
+          morale: 0,
+          message: "ชาวบ้านมองว่าเป็นการสร้างภาพ และยังคงไม่ไว้วางใจไซต์งานของคุณ"
+        }
+      },
+      {
+        label: "จ้างคนในพื้นที่มาทำงานเฝ้าระวัง",
+        costMoney: 100,
+        costResources: 0,
+        costMorale: 10,
+        successRate: 0.8,
+        successOutcome: {
+          money: 0,
+          resources: 50,
+          morale: 30,
+          message: "การมีรายได้เสริมทำให้ชาวบ้านเปลี่ยนใจมาสนับสนุนโครงการของคุณแทน"
+        },
+        failOutcome: {
+          money: -100,
+          resources: 0,
+          morale: -10,
+          message: "เกิดความขัดแย้งระหว่างคนงานเดิมกับคนในพื้นที่ ทำให้งานติดขัด"
+        }
+      },
+      {
+        label: "ขอกำลังตำรวจมาช่วยดูแลความสงบ",
+        costMoney: 250,
+        costResources: 0,
+        costMorale: -20,
+        successRate: 0.65,
+        successOutcome: {
+          money: 0,
+          resources: 100,
+          morale: 0,
+          message: "ตำรวจช่วยเปิดทางให้รถบรรทุกเข้าได้ แต่อย่าลืมว่าชาวบ้านจะไม่ชอบคุณ"
+        },
+        failOutcome: {
+          money: -100,
+          resources: -50,
+          morale: -40,
+          message: "สถานการณ์บานปลาย กลายเป็นข่าวใหญ่จนบริษัทเสียชื่อเสียงอย่างมาก"
+        }
+      },
+      {
+        label: "จัดประชุมชี้แจงมาตรการป้องกัน",
+        costMoney: 20,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.5,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 25,
+          message: "การสื่อสารที่ชัดเจนทำให้ความกังวลลดลง ชาวบ้านยอมให้ทำงานต่อ"
+        },
+        failOutcome: {
+          money: 0,
+          resources: -100,
+          morale: -10,
+          message: "การเจรจาไม่เป็นผล ชาวบ้านยังคงปิดทางเข้าอย่างเหนียวแน่น"
+        }
+      }
+    ]
+  },
+  {
+    id: "evt_050",
+    title: "หัวหน้าวิศวกรติดเชื้อต้องกักตัว",
+    description: "หัวใจหลักของการควบคุมหน้างานอย่างหัวหน้าวิศวกรติดเชื้อและต้องเข้าโรงพยาบาลสนามทันที งานเทยางมะตอยที่ต้องใช้ความแม่นยำสูงกำลังจะเริ่มในวันพรุ่งนี้",
+    options: [
+      {
+        label: "ให้วิศวกรสั่งงานผ่านวิดีโอคอล",
+        costMoney: 30,
+        costResources: 50,
+        costMorale: -10,
+        successRate: 0.6,
+        successOutcome: {
+          money: 0,
+          resources: 200,
+          morale: 10,
+          message: "แม้จะทุลักทุเล แต่หน้างานก็ดำเนินไปได้ตามแบบแปลนที่กำหนดไว้"
+        },
+        failOutcome: {
+          money: 0,
+          resources: -150,
+          morale: -20,
+          message: "สัญญาณอินเทอร์เน็ตมีปัญหาและการสื่อสารผิดพลาด ทำให้ถนนไม่ได้ระดับ"
+        }
+      },
+      {
+        label: "จ้างวิศวกรอิสระมาคุมงานชั่วคราว",
+        costMoney: 400,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.9,
+        successOutcome: {
+          money: 0,
+          resources: 350,
+          morale: 10,
+          message: "มืออาชีพทำงานได้อย่างไร้รอยต่อ งานออกมาเนียนกริบเหมือนเดิม"
+        },
+        failOutcome: {
+          money: -100,
+          resources: 50,
+          morale: -15,
+          message: "วิศวกรใหม่ไม่คุ้นเคยกับเครื่องจักรในไซต์ ทำให้งานล่าช้ากว่ากำหนด"
+        }
+      },
+      {
+        label: "โปรโมทช่างอาวุโสขึ้นมาคุมงาน",
+        costMoney: 100,
+        costResources: 0,
+        costMorale: 30,
+        successRate: 0.55,
+        successOutcome: {
+          money: 0,
+          resources: 250,
+          morale: 45,
+          message: "ช่างอาวุโสแสดงฝีมือได้ดีเยี่ยมและเป็นที่ยอมรับของทุกคนในทีม"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -100,
+          morale: -10,
+          message: "ช่างถนัดแต่งานฝีมือแต่คำนวณปริมาณวัสดุพลาด ทำให้ต้องสั่งวัสดุเพิ่ม"
+        }
+      },
+      {
+        label: "คุณลงไปคุมหน้างานด้วยตัวเอง",
+        costMoney: 0,
+        costResources: 150,
+        costMorale: 20,
+        successRate: 0.7,
+        successOutcome: {
+          money: 0,
+          resources: 100,
+          morale: 40,
+          message: "ความเป็นผู้นำของคุณทำให้คนงานฮึดสู้และทำงานออกมาได้มาตรฐาน"
+        },
+        failOutcome: {
+          money: -50,
+          resources: -50,
+          morale: -5,
+          message: "คุณขาดทักษะเฉพาะทางวิศวกรรมบางจุด ทำให้งานมีตำหนิเล็กน้อย"
+        }
+      }
+    ]
+  }
  ]
 }
