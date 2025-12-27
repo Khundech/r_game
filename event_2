@@ -1,4 +1,47 @@
-[
+{
+  "construction": [  
+    {
+      "title": "งบประมาณคงเหลือ",
+      "description": "เจอกระเป๋าเงินที่ผู้รับเหมาคนเก่าลืมไว้",
+      "moneyChange": 50,
+      "resourceChange": 0,
+      "moraleChange": 0,
+      "destroyRoad": false,
+      "type": "positive",
+      "chance": 0.04
+    },
+    {
+      "title": "ชาวบ้านช่วยงาน",
+      "description": "ชาวบ้านมาช่วยขนหิน ดิน ทราย เพื่อขอบคุณ",
+      "moneyChange": 20,
+      "resourceChange": 10,
+      "moraleChange": 5,
+      "destroyRoad": false,
+      "type": "positive",
+      "chance": 0.15
+    },
+    {
+      "title": "วัสดุไม่ได้มาตรฐาน",
+      "description": "ปูนที่สั่งมาแข็งคาโม่ ต้องทิ้งยกล็อต",
+      "moneyChange": 0,
+      "resourceChange": -30,
+      "moraleChange": -5,
+      "destroyRoad": false,
+      "type": "negative",
+      "chance": 0.08
+    },
+    {
+      "title": "อุบัติเหตุ!",
+      "description": "นั่งร้านถล่ม โชคดีไม่มีใครเจ็บหนัก",
+      "moneyChange": -30,
+      "resourceChange": -10,
+      "moraleChange": -10,
+      "destroyRoad": false,
+      "type": "negative",
+      "chance": 0.08
+    }
+  ],
+  "decisions": [
   {
     id: "1",
     eventType: "การเมือง",
@@ -306,3 +349,4 @@
     ]
   }
 ]
+}
