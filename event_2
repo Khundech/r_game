@@ -1,0 +1,308 @@
+[
+  {
+    id: "EVENT_FOREST_001",
+    eventType: "Conflict",
+    location: "ป่าอนุรักษ์รอยต่อจังหวัด",
+    title: "ปมปัญหาแนวเขตป่าไม้",
+    description: "เจ้าหน้าที่กรมป่าไม้และกลุ่มนักอนุรักษ์ในพื้นที่เข้าสั่งระงับการก่อสร้างชั่วคราว เนื่องจากพบว่าแนวถนนที่ขยายตัวล้ำเข้าไปในเขตป่าสงวนแห่งชาติโดยที่พิกัดในแบบแปลนไม่ตรงกับความจริง หากเดินหน้าต่ออาจถูกฟ้องร้องรุนแรง",
+    options: [
+      {
+        label: "จ้างทีมสำรวจอิสระมาตรวจสอบและแก้ไขพิกัดตามระเบียบ",
+        type: "OFFICIAL",
+        costMoney: 350,
+        costResources: 100,
+        costMorale: 10,
+        successRate: 0.9,
+        successOutcome: {
+          money: 400,
+          resources: 0,
+          morale: 5,
+          factions: {
+            villagers: 0,
+            politicians: 0,
+            government: 3,
+            companies: 1,
+            conservationists: 2
+          },
+          message: "การสำรวจพิกัดใหม่ได้รับการยอมรับจากกรมป่าไม้ และคุณได้รับเงินสนับสนุนส่วนเพิ่มจากการแก้แบบที่โปร่งใส",
+          rewardCharacter: "GOVERNMENT"
+        },
+        failOutcome: {
+          money: -200,
+          resources: -50,
+          morale: -15,
+          factions: {
+            villagers: 0,
+            politicians: -1,
+            government: -2,
+            companies: 0,
+            conservationists: -1
+          },
+          message: "การตรวจสอบล่าช้าและพบความผิดพลาดซ้ำซ้อน ทำให้เสียค่าปรับและงานต้องหยุดชะงัก",
+          rewardCharacter: "NONE"
+        }
+      },
+      {
+        label: "เจรจาขอมอบโครงการสร้างทางข้ามสัตว์ป่าเพื่อทดแทน",
+        type: "DIPLOMATIC",
+        costMoney: 200,
+        costResources: 300,
+        costMorale: 5,
+        successRate: 0.75,
+        successOutcome: {
+          money: 100,
+          resources: 0,
+          morale: 10,
+          factions: {
+            villagers: 2,
+            politicians: 1,
+            government: 1,
+            companies: 0,
+            conservationists: 3
+          },
+          message: "เหล่านักอนุรักษ์พอใจมากที่โครงการให้ความสำคัญกับสิ่งแวดล้อม และยอมถอนการคัดค้าน",
+          rewardCharacter: "CONSERVATIONIST"
+        },
+        failOutcome: {
+          money: -100,
+          resources: -150,
+          morale: -10,
+          factions: {
+            villagers: -1,
+            politicians: 0,
+            government: -1,
+            companies: 0,
+            conservationists: -2
+          },
+          message: "ข้อเสนอถูกปฏิเสธเนื่องจากกลุ่มอนุรักษ์มองว่าเป็นการแก้ปัญหาที่ไม่ตรงจุด",
+          rewardCharacter: "NONE"
+        }
+      },
+      {
+        label: "ติดต่อ ส.ส. พื้นที่ให้ช่วย 'จัดการ' เรื่องพิกัดที่ดิน",
+        type: "UNDERGROUND",
+        costMoney: 500,
+        costResources: 0,
+        costMorale: 0,
+        successRate: 0.6,
+        successOutcome: {
+          money: 500,
+          resources: 100,
+          morale: 0,
+          factions: {
+            villagers: -1,
+            politicians: 3,
+            government: 2,
+            companies: 2,
+            conservationists: -3
+          },
+          message: "อิทธิพลทางการเมืองช่วยให้เอกสารผ่านการอนุมัติอย่างรวดเร็วเหมือนไม่มีอะไรเกิดขึ้น",
+          rewardCharacter: "POLITICIAN"
+        },
+        failOutcome: {
+          money: -500,
+          resources: 0,
+          morale: -20,
+          factions: {
+            villagers: -1,
+            politicians: -2,
+            government: -3,
+            companies: 0,
+            conservationists: 1
+          },
+          message: "เรื่องอื้อฉาวรั่วไหลออกไปสู่สื่อมวลชน คุณถูกสอบสวนและเสียเงินสินบนไปฟรีๆ",
+          rewardCharacter: "NONE"
+        }
+      },
+      {
+        label: "สั่งคนงานเดินหน้าต่อทันที โดยอ้างว่ามีใบอนุญาตแล้ว",
+        type: "AGGRESSIVE",
+        costMoney: 0,
+        costResources: 50,
+        costMorale: -20,
+        successRate: 0.3,
+        successOutcome: {
+          money: 300,
+          resources: 0,
+          morale: -10,
+          factions: {
+            villagers: -2,
+            politicians: 1,
+            government: 0,
+            companies: 1,
+            conservationists: -3
+          },
+          message: "ความดุดันของคุณทำให้เจ้าหน้าที่ไม่กล้าปะทะชั่วคราว งานเดินหน้าไปได้เร็วขึ้น",
+          rewardCharacter: "NONE"
+        },
+        failOutcome: {
+          money: -400,
+          resources: -100,
+          morale: -30,
+          factions: {
+            villagers: -3,
+            politicians: -1,
+            government: -2,
+            companies: -1,
+            conservationists: -3
+          },
+          message: "กลุ่มผู้ประท้วงปิดล้อมไซท์งาน รถเครื่องจักรถูกทำลายและกลายเป็นข่าวดังระดับประเทศ",
+          rewardCharacter: "NONE"
+        }
+      }
+    ]
+  },
+  {
+    id: "EVENT_SPIRIT_TREE_002",
+    eventType: "Crisis",
+    location: "ไหล่เขารอยต่อชุมชน",
+    title: "เจ้าที่เจ้าทางกับงานวิศวกรรม",
+    description: "มีต้นไทรขนาดใหญ่ตั้งตระหง่านอยู่กลางแนวถมถนน ชาวบ้านท้องถิ่นเชื่อว่าเป็นที่สถิตของ 'เจ้าพ่อเขาเขียว' และสั่งห้ามตัดเด็ดขาด มิฉะนั้นจะเกิดอาเพศแก่คนงานและบริษัท",
+    options: [
+      {
+        label: "ยึดตามแบบแปลนเดิม สั่งโค่นต้นไม้ทิ้งด้วยเครื่องจักรหนัก",
+        type: "AGGRESSIVE",
+        costMoney: 50,
+        costResources: 0,
+        costMorale: -40,
+        successRate: 0.4,
+        successOutcome: {
+          money: 200,
+          resources: 0,
+          morale: -20,
+          factions: {
+            villagers: -3,
+            politicians: 1,
+            government: 2,
+            companies: 2,
+            conservationists: -2
+          },
+          message: "ต้นไม้ถูกโค่นลงอย่างรวดเร็ว งานก่อสร้างเดินหน้าต่อได้โดยไม่ต้องเสียเวลาอ้อม",
+          rewardCharacter: "NONE"
+        },
+        failOutcome: {
+          money: -300,
+          resources: -100,
+          morale: -50,
+          factions: {
+            villagers: -3,
+            politicians: -1,
+            government: -1,
+            companies: -1,
+            conservationists: -1
+          },
+          message: "เครื่องจักรขัดข้องอย่างอัศจรรย์และคนงานเกิดอุบัติเหตุจนต้องเข้าโรงพยาบาล ขวัญกำลังใจติดลบ",
+          rewardCharacter: "NONE"
+        }
+      },
+      {
+        label: "จัดพิธีบวงสรวงใหญ่และเชิญเกจิดังมาทำพิธีถอนศาล",
+        type: "DIPLOMATIC",
+        costMoney: 150,
+        costResources: 0,
+        costMorale: 30,
+        successRate: 0.85,
+        successOutcome: {
+          money: 0,
+          resources: 0,
+          morale: 40,
+          factions: {
+            villagers: 3,
+            politicians: 1,
+            government: 0,
+            companies: 0,
+            conservationists: 0
+          },
+          message: "ชาวบ้านเลื่อมใสในการให้เกียรติความเชื่อของโครงการ และส่งตัวแทนมาช่วยเป็นอาสาสมัคร",
+          rewardCharacter: "VILLAGER"
+        },
+        failOutcome: {
+          money: -150,
+          resources: 0,
+          morale: -10,
+          factions: {
+            villagers: -1,
+            politicians: 0,
+            government: 0,
+            companies: 0,
+            conservationists: 0
+          },
+          message: "พิธีกรรมไม่สามารถคลายความกังวลของชาวบ้านได้ทั้งหมด และมีเสียงวิจารณ์ว่าใช้เงินฟุ่มเฟือย",
+          rewardCharacter: "NONE"
+        }
+      },
+      {
+        label: "จ้างผู้เชี่ยวชาญการย้ายต้นไม้ขนาดใหญ่ไปปลูกในวัดแทน",
+        type: "OFFICIAL",
+        costMoney: 400,
+        costResources: 200,
+        costMorale: 10,
+        successRate: 0.8,
+        successOutcome: {
+          money: 200,
+          resources: 0,
+          morale: 20,
+          factions: {
+            villagers: 2,
+            politicians: 0,
+            government: 2,
+            companies: 1,
+            conservationists: 3
+          },
+          message: "การย้ายต้นไม้อย่างถูกวิธีได้รับคำชมจากสื่อมวลชน และบริษัทคู่ค้าให้การสนับสนุนวัสดุเพิ่ม",
+          rewardCharacter: "COMPANY"
+        },
+        failOutcome: {
+          money: -400,
+          resources: -200,
+          morale: -10,
+          factions: {
+            villagers: -1,
+            politicians: 0,
+            government: -1,
+            companies: -1,
+            conservationists: -2
+          },
+          message: "ต้นไม้ตายระหว่างการขนย้าย ทำให้เกิดกระแสวิจารณ์เชิงลบทั้งเรื่องงบประมาณและผลลัพธ์",
+          rewardCharacter: "NONE"
+        }
+      },
+      {
+        label: "ลอบวางยาต้นไม้ให้ยืนต้นตายในช่วงกลางคืน",
+        type: "UNDERGROUND",
+        costMoney: 80,
+        costResources: 0,
+        costMorale: -10,
+        successRate: 0.5,
+        successOutcome: {
+          money: 400,
+          resources: 100,
+          morale: -5,
+          factions: {
+            villagers: 0,
+            politicians: 2,
+            government: 1,
+            companies: 1,
+            conservationists: -3
+          },
+          message: "ต้นไม้ตายโดย 'ธรรมชาติ' ชาวบ้านคิดว่าสิ้นฤทธิ์แล้ว จึงยอมให้ตัดทิ้งโดยไม่ขัดข้อง",
+          rewardCharacter: "NONE"
+        },
+        failOutcome: {
+          money: -300,
+          resources: 0,
+          morale: -30,
+          factions: {
+            villagers: -2,
+            politicians: -1,
+            government: -1,
+            companies: 0,
+            conservationists: -2
+          },
+          message: "มีคนแอบถ่ายคลิปขณะทำลายต้นไม้ไว้ได้ โครงการถูกประณามอย่างหนัก",
+          rewardCharacter: "NONE"
+        }
+      }
+    ]
+  }
+]
